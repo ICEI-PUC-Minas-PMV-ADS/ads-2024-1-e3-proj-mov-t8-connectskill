@@ -33,11 +33,6 @@ Malu tem interesse em compartilhar suas habilidades culinárias e aprender novos
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
 <table>
   <tr>
     <th>Persona</th>
@@ -46,26 +41,25 @@ Com base na análise das personas forma identificadas as seguintes histórias de
   </tr>
   <tr>
     <td>Leandro</td>
-    <td>Estudante universitário de 21 anos, solteiro</td>
-    <td>Ciências exatas, artes, expandir conhecimentos além do currículo escolar</td>
+    <td>Leandro é um jovem, estudante universitário de 21 anos, solteiro.</td>
+    <td>Tem interesse em diversas áreas, desde ciências exatas e artes. Está disposto a investir em conhecimento numa forma flexível e acessível para expandir seus horizontes e aprofundar seus conhecimentos em temas que vão além do currículo escolar.</td>
   </tr>
   <tr>
     <td>Isa</td>
-    <td>Profissional ocupada, mãe e esposa de 31 anos</td>
-    <td>Aprender a tocar violão, flexibilidade de horário</td>
+    <td>Isa tem 31 anos, é uma profissional ocupada, mãe e esposa.</td>
+    <td>Sempre teve o desejo de aprender a tocar violão, mas nunca teve tempo para frequentar aulas presenciais. Ela está em busca de uma plataforma que lhe permita aprender no seu próprio ritmo, adaptando-se à sua agenda agitada.</td>
   </tr>
   <tr>
     <td>Pedro</td>
-    <td>Empreendedor de 29 anos iniciando seu próprio negócio</td>
-    <td>Mentoria em marketing digital e gestão de negócios</td>
+    <td>Pedro é um jovem de 29 anos, empreendedor que está iniciando seu próprio negócio.</td>
+    <td>Pedro entende que para ter sucesso em seu negócio, precisará de mentores e especialistas em áreas como marketing digital e gestão de negócios para ajudá-lo nessa jornada.</td>
   </tr>
   <tr>
     <td>Malu</td>
-    <td>Aposentada em busca de atividades significativas</td>
-    <td>Compartilhar habilidades culinárias, aprender novos idiomas</td>
+    <td>Malu é uma aposentada que busca por atividades significativas e estimulantes para preencher seu tempo livre.</td>
+    <td>Malu tem interesse em compartilhar suas habilidades culinárias e aprender novos idiomas.</td>
   </tr>
 </table>
-
 
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
