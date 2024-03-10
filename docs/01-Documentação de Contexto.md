@@ -1,36 +1,30 @@
-# Introdução
+# ConnectSkill
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+# Contexto/Problema
 
-## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Em um mundo cada vez mais conectado e em constante transformação, o conhecimento se torna a chave para o sucesso. No entanto, desafios como a desigualdade no acesso à educação, a falta de oportunidades de aprendizado e a dificuldade em encontrar mentores qualificados e dispostos impedem que muitas pessoas desenvolvam todo seu potencial.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+É nesse contexto que surge o aplicativo ConnectSkill, uma plataforma inovadora que conecta pessoas que desejam aprender e ensinar de forma flexível, personalizada e gratuita.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+O aplicativo ConnectSkill abrange toda e qualquer especialidade que deva ser compartilhada - seja você um especialista em música, idiomas, culinária ou qualquer outra área. Dessa forma, o app permite que seus usuários compartilhem seus talentos e habilidades com a comunidade, construindo uma rede de colaboração e aprendizado mútuo. Por outro lado, os usuários têm acesso a uma gama completa de conhecimentos e habilidades disponíveis para explorar, com a oportunidade de encontrar o tutor ideal para guiar sua jornada de aprendizado.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo deste projeto é criar uma plataforma digital que facilite a troca de habilidades entre os usuários. Ao se cadastrarem no aplicativo, os participantes podem oferecer suas próprias competências em troca de aprender novas habilidades de outros membros da comunidade. A intenção é promover uma cultura de colaboração e crescimento mútuo, onde os usuários possam se desenvolver pessoal e profissionalmente por meio da interação com uma ampla gama de habilidades. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Essa plataforma visa incentivar a diversidade de aprendizado, estimular a curiosidade e fomentar a construção de uma comunidade conectada e solidária, onde todos têm a oportunidade de contribuir e se beneficiar.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A justificativa para este projeto reside na necessidade de promover uma cultura de aprendizado contínuo e colaboração em um mundo cada vez mais conectado digitalmente. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Com a rápida evolução tecnológica e as constantes mudanças nos mercados de trabalho, é essencial que as pessoas estejam sempre buscando adquirir novas habilidades e conhecimentos para se adaptarem e se desenvolverem pessoalmente.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+No entanto, muitas vezes, o acesso a oportunidades de aprendizado pode ser limitado por barreiras geográficas, financeiras ou de outra natureza. Este aplicativo de troca de habilidades visa eliminar essas barreiras, proporcionando um espaço virtual onde os indivíduos podem compartilhar suas habilidades e aprender uns com os outros, independentemente de sua localização ou recursos financeiros.
+
+Além disso, este projeto se justifica pela sua capacidade de promover uma comunidade mais unida e colaborativa. Ao incentivar a troca de conhecimentos e habilidades, o aplicativo não apenas capacita os indivíduos, mas também fortalece os laços de empatia e cooperação entre os membros da comunidade, estimulando a diversidade de aprendizado e promovendo o desenvolvimento pessoal e profissional dos participantes.
+
+Em resumo, este projeto é justificado pela sua capacidade de promover o aprendizado contínuo, eliminar barreiras de acesso ao conhecimento, fortalecer a cooperação entre usuários e estimular o desenvolvimento pessoal e profissional dos participantes.
 
 ## Público-Alvo
 
