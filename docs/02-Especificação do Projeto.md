@@ -38,7 +38,34 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
 |Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+<table>
+  <tr>
+    <th>Persona</th>
+    <th>Descrição</th>
+    <th>Interesses</th>
+  </tr>
+  <tr>
+    <td>Leandro</td>
+    <td>Estudante universitário de 21 anos, solteiro</td>
+    <td>Ciências exatas, artes, expandir conhecimentos além do currículo escolar</td>
+  </tr>
+  <tr>
+    <td>Isa</td>
+    <td>Profissional ocupada, mãe e esposa de 31 anos</td>
+    <td>Aprender a tocar violão, flexibilidade de horário</td>
+  </tr>
+  <tr>
+    <td>Pedro</td>
+    <td>Empreendedor de 29 anos iniciando seu próprio negócio</td>
+    <td>Mentoria em marketing digital e gestão de negócios</td>
+  </tr>
+  <tr>
+    <td>Malu</td>
+    <td>Aposentada em busca de atividades significativas</td>
+    <td>Compartilhar habilidades culinárias, aprender novos idiomas</td>
+  </tr>
+</table>
+
 
 > **Links Úteis**:
 > - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
