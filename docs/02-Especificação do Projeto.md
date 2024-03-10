@@ -39,22 +39,22 @@ Este projeto visa eliminar barreiras geográficas, financeiras ou de outra natur
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
 
-<h2>Leandro quer expandir seus conhecimentos</h2>
+<h3>Leandro quer expandir seus conhecimentos</h2>
 <p>Como estudante universitário interessado em diversas áreas do conhecimento,<br>
 Eu quero acessar uma plataforma que me permita aprender e ensinar de maneira flexível,<br>
 Para que eu possa expandir meus horizontes e aprofundar meus conhecimentos em temas diversos, indo além do currículo escolar.</p>
 
-<h2>Isa busca equilibrar aprendizado e vida pessoal</h2>
+<h3>Isa busca equilibrar aprendizado e vida pessoal</h2>
 <p>Como uma mãe e profissional ocupada que deseja aprender a tocar violão,<br>
 Eu quero encontrar uma plataforma que me permita aprender no meu próprio ritmo e se adapte à minha agenda,<br>
 Para que eu possa realizar meu desejo de aprender música sem comprometer minhas responsabilidades familiares e profissionais.</p>
 
-<h2>Pedro precisa de orientação para seu negócio</h2>
+<h3>Pedro precisa de orientação para seu negócio</h2>
 <p>Como um jovem empreendedor iniciando seu próprio negócio,<br>
 Eu quero ter acesso a mentores e especialistas em áreas críticas para o sucesso do meu empreendimento, como marketing digital e gestão,<br>
 Para que eu possa obter o conhecimento necessário para crescer e ter sucesso no mundo dos negócios.</p>
 
-<h2>Malu deseja permanecer ativa e aprender coisas novas</h2>
+<h3>Malu deseja permanecer ativa e aprender coisas novas</h2>
 <p>Como uma aposentada interessada em manter-se ativa e aprender novos idiomas,<br>
 Eu quero compartilhar minhas habilidades culinárias enquanto aprendo outros idiomas,<br>
 Para que eu possa encontrar significado e satisfação em minhas atividades diárias, mantendo-me mentalmente ativa e engajada com a comunidade.</p>
