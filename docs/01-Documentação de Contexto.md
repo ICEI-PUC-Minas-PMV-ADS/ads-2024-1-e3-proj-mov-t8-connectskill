@@ -1,6 +1,6 @@
 # ConnectSkill
 
-# Contexto/Problema
+## Contexto/Problema
 
 Em um mundo cada vez mais conectado e em constante transformação, o conhecimento se torna a chave para o sucesso. No entanto, desafios como a desigualdade no acesso à educação, a falta de oportunidades de aprendizado e a dificuldade em encontrar mentores qualificados e dispostos impedem que muitas pessoas desenvolvam todo seu potencial.
 
