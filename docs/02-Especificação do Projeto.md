@@ -1,10 +1,8 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+O aplicativo de troca de habilidades é uma plataforma digital desenvolvida para promover uma cultura de aprendizado contínuo e colaboração em um mundo cada vez mais conectado digitalmente. Com a rápida evolução tecnológica e as constantes mudanças nos mercados de trabalho, é essencial que as pessoas estejam sempre buscando adquirir novas habilidades e conhecimentos para se adaptarem e se desenvolverem pessoalmente. 
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Este projeto visa eliminar barreiras geográficas, financeiras ou de outra natureza ao acesso a oportunidades de aprendizado, proporcionando um espaço virtual onde os indivíduos podem compartilhar suas habilidades e aprender uns com os outros, independentemente de sua localização ou recursos financeiros.
 
 ## Personas
 <ul>
