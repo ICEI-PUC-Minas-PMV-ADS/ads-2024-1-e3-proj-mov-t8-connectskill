@@ -5,34 +5,6 @@ O aplicativo de troca de habilidades é uma plataforma digital desenvolvida para
 Este projeto visa eliminar barreiras geográficas, financeiras ou de outra natureza ao acesso a oportunidades de aprendizado, proporcionando um espaço virtual onde os indivíduos podem compartilhar suas habilidades e aprender uns com os outros, independentemente de sua localização ou recursos financeiros.
 
 ## Personas
-<ul>
- <li> <strong>Leandro</strong> é um jovem, estudante universitário de 21 anos, solteiro.
-
-Tem interesse em diversas áreas, desde ciências exatas e artes. Está disposto a investir em conhecimento numa forma flexível e acessível para expandir seus horizontes e aprofundar seus conhecimentos em temas que vão além do currículo escolar.
-</li>
-<li> <strong>Isa</strong> tem 31 anos, é uma profissional ocupada, mãe e esposa.
-
-Sempre teve o desejo de aprender a tocar violão, mas nunca teve tempo para frequentar aulas presenciais. Ela está em busca de uma plataforma que lhe permita aprender no seu próprio ritmo, adaptando-se à sua agenda agitada. </li>
-
-<li> <strong>Pedro </strong> é um jovem de 29 anos, empreendedor que está iniciando seu próprio negócio. 
-
-Pedro entende que para ter sucesso em seu negócio, precisará de mentores e especialistas em áreas como marketing digital e gestão de negócios para ajudá-lo nessa jornada.
-
-</li>
-<li> <strong>Malu</strong> é uma aposentada que busca por atividades significativas e estimulantes para preencher seu tempo livre.
-
-Malu tem interesse em compartilhar suas habilidades culinárias e aprender novos idiomas.
-
-</li>
-</ul>
-
-
-
-
-## Histórias de Usuários
-
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-
 <table>
   <tr>
     <th>Persona</th>
@@ -61,76 +33,111 @@ Com base na análise das personas forma identificadas as seguintes histórias de
   </tr>
 </table>
 
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
-## Modelagem do Processo de Negócio 
+## Histórias de Usuários
 
-### Análise da Situação Atual
+Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
 
-### Descrição Geral da Proposta
+<h2>Leandro quer expandir seus conhecimentos</h2>
+<p>Como estudante universitário interessado em diversas áreas do conhecimento,<br>
+Eu quero acessar uma plataforma que me permita aprender e ensinar de maneira flexível,<br>
+Para que eu possa expandir meus horizontes e aprofundar meus conhecimentos em temas diversos, indo além do currículo escolar.</p>
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+<h2>Isa busca equilibrar aprendizado e vida pessoal</h2>
+<p>Como uma mãe e profissional ocupada que deseja aprender a tocar violão,<br>
+Eu quero encontrar uma plataforma que me permita aprender no meu próprio ritmo e se adapte à minha agenda,<br>
+Para que eu possa realizar meu desejo de aprender música sem comprometer minhas responsabilidades familiares e profissionais.</p>
 
-### Processo 1 – NOME DO PROCESSO
+<h2>Pedro precisa de orientação para seu negócio</h2>
+<p>Como um jovem empreendedor iniciando seu próprio negócio,<br>
+Eu quero ter acesso a mentores e especialistas em áreas críticas para o sucesso do meu empreendimento, como marketing digital e gestão,<br>
+Para que eu possa obter o conhecimento necessário para crescer e ter sucesso no mundo dos negócios.</p>
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-![Processo 1](img/02-bpmn-proc1.png)
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
-
-![Processo 2](img/02-bpmn-proc2.png)
-
-## Indicadores de Desempenho
-
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
-
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+<h2>Malu deseja permanecer ativa e aprender coisas novas</h2>
+<p>Como uma aposentada interessada em manter-se ativa e aprender novos idiomas,<br>
+Eu quero compartilhar minhas habilidades culinárias enquanto aprendo outros idiomas,<br>
+Para que eu possa encontrar significado e satisfação em minhas atividades diárias, mantendo-me mentalmente ativa e engajada com a comunidade.</p>
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
-
 ### Requisitos Funcionais
+Os Requisitos Funcionais definem o comportamento do sistema. Descrevem o que o sistema deve fazer com detalhes sobre as operações que serão realizadas.
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+<table>
+  <tr>
+    <th>Requisito Funcional</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>RF01 - Gerenciamento de Habilidades</td>
+    <td>Permite que os usuários informem e atualizem os grupos de habilidades que possuem. Isso possibilita uma melhor organização e categorização das habilidades dos usuários dentro do sistema, facilitando a busca por perfis específicos e a formação de equipes com base nas competências necessárias para determinadas tarefas ou projetos.</td>
+  </tr>
+  <tr>
+    <td>RF02 - Busca por grupos/interesses</td>
+    <td>Os usuários têm a capacidade de realizar buscas e aplicar filtros para encontrar outros usuários com base em suas habilidades, interesses e disponibilidade. Isso permite que os usuários encontrem perfis específicos que atendam às suas necessidades ou interesses.</td>
+  </tr>
+  <tr>
+    <td>RF03 - Agendamento Flexível</td>
+    <td>Permite aos usuários agendar sessões de aprendizado de acordo com sua disponibilidade pessoal. Ao acessar a plataforma, os usuários têm a opção de escolher o horário que melhor se adequa à sua agenda e preferências. O sistema também fornece um campo para que os usuários possam indicar sua disponibilidade, facilitando a organização e coordenação de horários entre os participantes.</td>
+  </tr>
+  <tr>
+    <td>RF04 - Integração com ferramentas de comunicação</td>
+    <td>Permite aos usuários se comunicarem por meio de mensagens e chamadas de vídeo integradas à plataforma. Os usuários podem utilizar ferramentas de comunicação, como o WhatsApp, Telegram, Google Meet, para interagir diretamente com outros usuários dentro da plataforma, facilitando a troca de informações, o esclarecimento de dúvidas e a colaboração em projetos e atividades de aprendizado.</td>
+  </tr>
+  <tr>
+    <td>RF05 - Sistema de Avaliação e Feedback</td>
+    <td>Usuários podem avaliar e fornecer feedback sobre suas experiências após as sessões de aprendizado.</td>
+  </tr>
+  <tr>
+    <td>RF06 - Suporte a Diversas Áreas de Conhecimento</td>
+    <td>Os usuários têm acesso a uma ampla variedade de campos de especialização, incluindo tecnologia, culinária, design, artes, corte e costura, idiomas, entre outros. Isso permite que os usuários explorem e compartilhem conhecimentos em áreas específicas de interesse, expandindo suas habilidades e oportunidades de aprendizado.</td>
+  </tr>
+</table>
+
 
 ### Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+Os Requisitos Não Funcionais especificam critérios que podem ser usados para julgar a operação de um sistema. Eles não descrevem o que o sistema faz, mas como o sistema faz.
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+<table>
+  <tr>
+    <th>Requisito Não Funcional</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>RNF 01 - Usabilidade</td>
+    <td>A interface do usuário será projetada visando proporcionar uma experiência intuitiva e acessível para pessoas de todas as idades. Será desenvolvida de forma a garantir que os usuários possam navegar e utilizar suas funcionalidades sem a necessidade de treinamento. O objetivo é promover uma experiência de uso fluida e eficiente, maximizando a satisfação do usuário e otimizando a produtividade.</td>
+  </tr>
+  <tr>
+    <td>RNF 02 - Desempenho</td>
+    <td>As respostas do sistema devem ser rápidas, com tempos de carregamento de páginas inferiores a 2 segundos.</td>
+  </tr>
+  <tr>
+    <td>RNF 03 - Segurança</td>
+    <td>Serão implementadas medidas robustas para proteger os dados dos usuários. A aplicação deve usar protocolo HTTPS, garantindo que os dados transmitidos estejam criptografados e protegidos contra interceptação por terceiros. O padrão de senha deve seguir o mínimo de 8 caracteres incluindo letras, números e caracteres especiais.</td>
+  </tr>
+  <tr>
+    <td>RNF 04 - Escalabilidade</td>
+    <td>A plataforma deve ser capaz de suportar um aumento significativo no número de usuários sem degradação do desempenho.</td>
+  </tr>
+  <tr>
+    <td>RNF 05 - Confiabilidade</td>
+    <td>O sistema será projetado visando uma disponibilidade de serviço de 99.9%. Isso significa que a plataforma estará operacional e acessível aos usuários durante a maior parte do tempo, com interrupções mínimas.</td>
+  </tr>
+  <tr>
+    <td>RNF 06 - Acessibilidade</td>
+    <td>A plataforma deve ser acessível para usuários com diferentes tipos de deficiências, seguindo as diretrizes de acessibilidade da web.</td>
+  </tr>
+  <tr>
+    <td>RNF 07 - Interoperabilidade</td>
+    <td>O aplicativo deve ser capaz de integrar-se com outras plataformas e serviços para enriquecer a experiência do usuário.</td>
+  </tr>
+  <tr>
+    <td>RNF 08 - Manutenção</td>
+    <td>Para garantir a manutenção do sistema, é crucial que o código seja bem documentado e estruturado de forma clara e coesa. Isso facilitará não apenas as atualizações futuras, mas também a própria manutenção do código ao longo do tempo.</td>
+  </tr>
+</table> 
 
 ## Restrições
 
