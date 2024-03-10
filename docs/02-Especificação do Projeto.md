@@ -7,20 +7,29 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
 
 ## Personas
+<ul>
+ <li> <strong>Leandro</strong> é um jovem, estudante universitário de 21 anos, solteiro.
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Tem interesse em diversas áreas, desde ciências exatas e artes. Está disposto a investir em conhecimento numa forma flexível e acessível para expandir seus horizontes e aprofundar seus conhecimentos em temas que vão além do currículo escolar.
+</li>
+<li> <strong>Isa</strong> tem 31 anos, é uma profissional ocupada, mãe e esposa.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Sempre teve o desejo de aprender a tocar violão, mas nunca teve tempo para frequentar aulas presenciais. Ela está em busca de uma plataforma que lhe permita aprender no seu próprio ritmo, adaptando-se à sua agenda agitada. </li>
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<li> <strong>Pedro </strong> é um jovem de 29 anos, empreendedor que está iniciando seu próprio negócio. 
+
+Pedro entende que para ter sucesso em seu negócio, precisará de mentores e especialistas em áreas como marketing digital e gestão de negócios para ajudá-lo nessa jornada.
+
+</li>
+<li> <strong>Malu</strong> é uma aposentada que busca por atividades significativas e estimulantes para preencher seu tempo livre.
+
+Malu tem interesse em compartilhar suas habilidades culinárias e aprender novos idiomas.
+
+</li>
+</ul>
+
+
+
 
 ## Histórias de Usuários
 
