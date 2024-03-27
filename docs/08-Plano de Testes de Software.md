@@ -52,12 +52,3 @@
 |Critério de Êxito | - Avaliação realizada. |
 |  	|  	|
 
-
-
-| **Caso de Teste** 	| **CT-12 – Teste de comportamento para averiguar o Humor**	                                                  |
-|:---:	|:---:	|
-|Requisito Associado | RF-001 e RF-003.                                                                                                 |
-| Objetivo do Teste 	| Verificar se o usuario consegue consultar as Alterações de Humor    |             
-| Passos 	| - Usuário logado <br> - Clicar em Ciclo Menstrual - Clicar em Alterações de Humor <br> - Marcar as alterações correspondentes  |
-|Critério de Êxito | - Consultar Alterações de Humor. |
-|  	|  	|
