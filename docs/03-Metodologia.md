@@ -3,12 +3,40 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Tendo em vista o cumprimento do objetivo deste projeto de estruturar um aplicativo que permitirá a troca de habilidades entre os usuários. Foi utilizado um framework com abordagem ágil, Scrum, para organizar e simplificar cada etapa do processo até a entrega. Foram utilizadas ferramentas como JIRA e FIGMA para planejamento e execução. As atividades foram organizadas em três seções: Relação de Ambientes de Trabalho, Controle de Versão e Gerenciamento do Projeto. Essa estrutura permite avaliar estrategicamente o progresso, identificar falhas e considerar melhorias ao longo do processo.
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+<p>As ferramentas utilizadas para o desenvolvimento e execução do projeto se deu através de recursos que auxiliaram o processo, conforme tabela a seguir:
+</p>
+
+<table>
+    <tr>
+        <td>Ambiente</td>
+        <td>Plataforma</td>
+        <td>Link de Acesso</td>
+    </tr>
+    <tr>
+        <td>Repositório do código fonte</td>
+        <td>Github</td>
+        <td>(https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill)</td>
+    </tr>
+    <tr>
+        <td>Documentos do projeto</td>
+        <td>Google Drive</td>
+        <td>(https://docs.google.com/document/d/1B2Ze3KqNHPECiKY-ZE5IgcLOGyV3aCiPVTlqX1iJZRA/edit?usp=sharing)</td>
+    </tr>
+    <tr>
+        <td>Projeto de Interface e Wireframes</td>
+        <td>Figma</td>
+        <td>()</td>
+    </tr>
+     <tr>
+        <td>Gerenciamento do Projeto</td>
+        <td>JIRA</td>
+        <td>()</td>
+   </tr>
+</table>
 
 ## Controle de Versão
 
@@ -42,33 +70,32 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 > - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 ## Gerenciamento de Projeto
+<p>O time de desenvolvimento deste projeto optou por utilizar o framework com abordagem ágil, chamado de Scrum, para um melhor tratamento dos dados e estruturação do projeto. Organizando e priorizando o que deve ser realizado em cada etapa . Conforme descreve o Scrum Guide (2020), existem três papéis no Scrum, sendo o Product Owner, Scrum Master e Time de Desenvolvedores. </p>
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+Em conformidade com a adesão do framework, os componentes desse projeto estão divididos da seguinte forma:
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+<ul>
+ <li>Scrum Master: Maria Júlia </li>
+ <li>Product Owner: Láisa Liane</li>
+ <li>Time de Desenvolvimento: Túlio Barros e Leander Santos.
+</li>
+</ul>
 
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Em complemento para auxiliar no acompanhamento do progresso das tarefas e sua distribuição, está sendo utilizada a plataforma Jira, que está estruturada da seguinte forma:
+<ul>
+<LI>TO DO: Representando as tarefas que precisam ser realizadas e ainda não foram atribuídas a nenhum desenvolvedor;</LI>
+<li>DOING: Refere-se às tarefas já atribuídas e em andamento;</li>
+<li>BLOCK: Trata-se de tarefas bloqueadas ou impedidas por algum acontecimento improcedente;</li>
+<li>TESTING: Esta fase representa a fase de testes, onde são criados cenários e realizados testes em conformidade com as tarefas;</li>
+<li>DONE: Representa as tarefas prontas, finalizadas.</li>
+</ul>
+
+O quadro scrum referente a Sprint 2, está representado abaixo no Jira conforme figura 1 abaixo e disponível através da URL
 
 ### Ferramentas
 
