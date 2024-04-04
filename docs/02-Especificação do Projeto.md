@@ -225,6 +225,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O projeto será desenvolvido em etapas, onde a cada entrega haverá uma prioridade em foco. Ele será administrado por meio da designação de tarefas pela plataforma Jira, e qualquer necessidade de criar prototipagem ou wireframes será atendida utilizando o Figma.
 
+https://mariajuliagfigueiredo.atlassian.net/jira/software/projects/CONECT/boards/1
+
 ## Gerenciamento de Tempo
 
 Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
