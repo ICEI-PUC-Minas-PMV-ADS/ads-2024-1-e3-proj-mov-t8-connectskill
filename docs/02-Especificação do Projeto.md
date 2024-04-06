@@ -226,7 +226,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 O projeto será desenvolvido em etapas, onde a cada entrega haverá uma prioridade em foco. Ele será administrado por meio da designação de tarefas pela plataforma Jira, e qualquer necessidade de criar prototipagem ou wireframes será atendida utilizando o Figma.
 
-https://mariajuliagfigueiredo.atlassian.net/jira/software/projects/CONECT/boards/1
+https://connectskill.atlassian.net/jira/servicedesk/projects/SUP/boards/1
 
 ## Gerenciamento de Tempo
 
