@@ -150,7 +150,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/d5f29478-a181-4faa-b657-64741749dc35)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/47a4ac4a-8d02-4517-87cd-9749642f4e55)
+
 
 # Matriz de Rastreabilidade
 
