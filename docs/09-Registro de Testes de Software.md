@@ -8,7 +8,7 @@ Utilizaremos o Jest para realizar os testes das features, seguindo boas prática
 ## Protótipos iniciais
 
 ### Login 
-<img width="950" alt="" src="docs\img\login_prot.png">
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/docs/img/login_prot.png)
 
 ## Avaliação
 
