@@ -8,7 +8,7 @@ Utilizaremos o Jest para realizar os testes das features, seguindo boas prática
 ## Protótipos iniciais
 
 ### Login 
-![alt text](image.png)
+<img width="950" alt="" src="docs\img\login_prot.png">
 
 ## Avaliação
 
