@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import { ExternalLink } from './ExternalLink';
 import { MonoText } from './StyledText';
-import { Text, View } from './Themed';
+import { Text, View, TextInput, Button } from './Themed';
 
 import Colors from '@/constants/Colors';
 
@@ -11,26 +11,31 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
+
         <Text
           style={styles.getStartedText}
           lightColor="rgba(0,0,0,0.8)"
           darkColor="rgba(255,255,255,0.8)">
-          frame inicial
+          Entre com suas credenciais
         </Text>
 
-        <View
-          style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-          darkColor="rgba(255,255,255,0.05)"
-          lightColor="rgba(0,0,0,0.05)">
-          <MonoText>{path}</MonoText>
+        <View style={styles.loginFormContainer}>
+          <TextInput
+            style={styles.input}
+            placeholder="Username"
+            
+          />
+          <TextInput
+            style={styles.input}
+            placeholder="Password"
+            secureTextEntry={true}
+            
+          />
+          <Button
+            title="Login"
+          />
         </View>
-
-        <Text
-          style={styles.getStartedText}
-          lightColor="rgba(0,0,0,0.8)"
-          darkColor="rgba(255,255,255,0.8)">
-          teste
-        </Text>
+        
       </View>
 
       <View style={styles.helpContainer}>
@@ -53,6 +58,17 @@ const styles = StyleSheet.create({
   },
   homeScreenFilename: {
     marginVertical: 7,
+  },
+  loginFormContainer: {
+    marginTop: 20,
+  },
+  input: {
+    height: 40,
+    width: 250,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
   },
   codeHighlightContainer: {
     borderRadius: 3,
