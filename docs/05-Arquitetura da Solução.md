@@ -52,16 +52,27 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 > - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
 
 ## Qualidade de Software
+### Facilidade de Uso
+Interface intuitiva e amigável, permitindo que os usuários naveguem facilmente pelo aplicativo e realizem suas tarefas sem dificuldades.
 
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
+### Eficiência
+Processos otimizados para garantir que as operações, como enviar mensagens, registrar novos usuários e gerenciar habilidades, sejam concluídas de forma rápida e eficiente.
 
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
+### Confiabilidade
+O sistema é robusto e confiável, garantindo que as mensagens sejam entregues corretamente e que os dados dos usuários sejam armazenados com segurança.
 
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
+### Personalização
+Capacidade de os usuários personalizarem seus perfis, adicionarem habilidades e interesses específicos, proporcionando uma experiência personalizada.
 
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
+### Segurança
+Implementação de medidas de segurança robustas, como criptografia de dados e autenticação de usuário, para proteger as informações pessoais dos usuários e garantir a integridade do sistema.
+
+### Flexibilidade
+O software permite a troca de experiências em uma variedade de áreas, permitindo que os usuários compartilhem habilidades e interesses diversos.
+
+### Gerenciamento de Mensagens
+Funcionalidades para enviar, receber e gerenciar mensagens de forma eficaz, possibilitando uma comunicação fluida entre os usuários.
+
+### Administração de Habilidades
+Capacidade de os administradores supervisionarem as habilidades cadastradas no sistema, garantindo a qualidade e relevância das experiências compartilhadas pelos usuários.
+
