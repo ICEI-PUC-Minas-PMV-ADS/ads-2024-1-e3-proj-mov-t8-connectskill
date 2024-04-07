@@ -29,6 +29,7 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
  
 As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
+![Captura de Tela 2024-04-06 às 22 48 15](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/116657748/e67e5a7c-4c4d-4014-8ec6-3989a22885f4)
 
 
 
