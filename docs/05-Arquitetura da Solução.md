@@ -19,6 +19,7 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
 
+<img width="996" alt="Captura de Tela 2024-04-06 às 22 19 52" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/116657748/388a0be6-99d6-44db-b386-589fb995f674">
 
 
 
@@ -28,7 +29,6 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
  
 As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
-<img width="996" alt="Captura de Tela 2024-04-06 às 22 19 52" src="https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/116657748/388a0be6-99d6-44db-b386-589fb995f674">
 
 ## Modelo Físico
 
