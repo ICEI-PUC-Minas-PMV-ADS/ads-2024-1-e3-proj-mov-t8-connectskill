@@ -5,59 +5,50 @@ O aplicativo de troca de habilidades é uma plataforma digital desenvolvida para
 Este projeto visa eliminar barreiras geográficas, financeiras ou de outra natureza ao acesso a oportunidades de aprendizado, proporcionando um espaço virtual onde os indivíduos podem compartilhar suas habilidades e aprender uns com os outros, independentemente de sua localização ou recursos financeiros.
 
 ## Personas
-<table>
-  <tr>
-    <th>Persona</th>
-    <th>Descrição</th>
-    <th>Interesses</th>
-  </tr>
-  <tr>
-    <td>Leandro</td>
-    <td>Leandro é um jovem, estudante universitário de 21 anos, solteiro.</td>
-    <td>Tem interesse em diversas áreas, desde ciências exatas e artes. Está disposto a investir em conhecimento numa forma flexível e acessível para expandir seus horizontes e aprofundar seus conhecimentos em temas que vão além do currículo escolar.</td>
-  </tr>
-  <tr>
-    <td>Isa</td>
-    <td>Isa tem 31 anos, é uma profissional ocupada, mãe e esposa.</td>
-    <td>Sempre teve o desejo de aprender a tocar violão, mas nunca teve tempo para frequentar aulas presenciais. Ela está em busca de uma plataforma que lhe permita aprender no seu próprio ritmo, adaptando-se à sua agenda agitada.</td>
-  </tr>
-  <tr>
-    <td>Pedro</td>
-    <td>Pedro é um jovem de 29 anos, empreendedor que está iniciando seu próprio negócio.</td>
-    <td>Pedro entende que para ter sucesso em seu negócio, precisará de mentores e especialistas em áreas como marketing digital e gestão de negócios para ajudá-lo nessa jornada.</td>
-  </tr>
-  <tr>
-    <td>Malu</td>
-    <td>Malu é uma aposentada que busca por atividades significativas e estimulantes para preencher seu tempo livre.</td>
-    <td>Malu tem interesse em compartilhar suas habilidades culinárias e aprender novos idiomas.</td>
-  </tr>
-</table>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/4a644269-8de2-4189-8cc2-1e064626e3d8)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/b5079314-3c80-4c52-9c3a-ec79f8205fbe)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/e6181c82-bef7-48da-83ae-0044bee0ac29)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/5a459eb6-5ad8-4b2e-9bac-0cd6770edbda)
+
 
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+
+<table>
+  <tr>
+    <th>Persona</th>
+    <th>Quero/Preciso</th>
+    <th>Motivo</th>
+  </tr>
+  <tr>
+    <td>Leandro</td>
+    <td>Aprofundar seus conhecimentos em temas além do curriculo escolas.</td>
+    <td>Cursar uma boa faculdade, expandir o seu dominio.</td>
+  </tr>
+  <tr>
+    <td>Isa</td>
+    <td>Aprender a tocar violão.</td>
+    <td>Aprender um novo instrumento é um hobby.</td>
+  </tr>
+  <tr>
+    <td>Pedro</td>
+    <td>Aprender a empreender.</td>
+    <td>Desejo de abrir o próprio negócio.</td>
+  </tr>
+  <tr>
+    <td>Malu</td>
+    <td>Aprender novos idiomas.</td>
+    <td>Preencher o tempo livre.</td>
+  </tr>
+</table>
 
 
-<h3>Leandro quer expandir seus conhecimentos</h2>
-<p>Como estudante universitário interessado em diversas áreas do conhecimento,<br>
-Eu quero acessar uma plataforma que me permita aprender e ensinar de maneira flexível,<br>
-Para que eu possa expandir meus horizontes e aprofundar meus conhecimentos em temas diversos, indo além do currículo escolar.</p>
 
-<h3>Isa busca equilibrar aprendizado e vida pessoal</h2>
-<p>Como uma mãe e profissional ocupada que deseja aprender a tocar violão,<br>
-Eu quero encontrar uma plataforma que me permita aprender no meu próprio ritmo e se adapte à minha agenda,<br>
-Para que eu possa realizar meu desejo de aprender música sem comprometer minhas responsabilidades familiares e profissionais.</p>
-
-<h3>Pedro precisa de orientação para seu negócio</h2>
-<p>Como um jovem empreendedor iniciando seu próprio negócio,<br>
-Eu quero ter acesso a mentores e especialistas em áreas críticas para o sucesso do meu empreendimento, como marketing digital e gestão,<br>
-Para que eu possa obter o conhecimento necessário para crescer e ter sucesso no mundo dos negócios.</p>
-
-<h3>Malu deseja permanecer ativa e aprender coisas novas</h2>
-<p>Como uma aposentada interessada em manter-se ativa e aprender novos idiomas,<br>
-Eu quero compartilhar minhas habilidades culinárias enquanto aprendo outros idiomas,<br>
-Para que eu possa encontrar significado e satisfação em minhas atividades diárias, mantendo-me mentalmente ativa e engajada com a comunidade.</p>
 
 ## Requisitos
 
