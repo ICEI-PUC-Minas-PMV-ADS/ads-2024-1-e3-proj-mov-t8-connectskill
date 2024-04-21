@@ -23,13 +23,18 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 
 <h2>Tela de Cadastro</h2>
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/a2dc5db8-37a1-430b-b899-c4f07b8e1d65)
+![2](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/3ca55260-2810-4d47-949b-8ecc732d9c3c)
 
 <h2>Tela de Login</h2>
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/68e2e933-6def-424f-bd5c-f7a8a44386bd)
+![1](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/5a8bea1e-c7be-41db-89e3-76abd26c8b08)
 
 <h2>Tela de Perfil</h2>
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/125780065/d7c8aa60-2776-4d02-8aec-da08218875cf)
+![3](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/9a1d8eda-2fd1-47fc-85c6-58054ef1cdd7)
+
+<h2>Tela de Pesquisa </h2>
+
+![4](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/9ac3ffa3-5fb9-4bdf-aab7-422376adc13c)
+
 
