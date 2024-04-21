@@ -224,9 +224,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Gerenciamento de Projeto
 
-O projeto será desenvolvido em etapas, onde a cada entrega haverá uma prioridade em foco. Ele será administrado por meio da designação de tarefas pela plataforma Jira, e qualquer necessidade de criar prototipagem ou wireframes será atendida utilizando o Figma.
+O projeto será desenvolvido em etapas, onde a cada entrega haverá uma prioridade em foco. Ele será administrado por meio da designação de tarefas pela plataforma Trello, e qualquer necessidade de criar prototipagem ou wireframes será atendida utilizando o Figma.
 
-https://connectskill.atlassian.net/jira/servicedesk/projects/SUP/boards/1
+(https://trello.com/invite/b/wl1WNmiq/ATTI901c0ae89ee9162bf10fc3e337799066011507C9/etapa-2))
 
 ## Gerenciamento de Tempo
 
