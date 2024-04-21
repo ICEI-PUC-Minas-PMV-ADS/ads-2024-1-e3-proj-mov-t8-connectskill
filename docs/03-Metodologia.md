@@ -3,7 +3,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
-Tendo em vista o cumprimento do objetivo deste projeto de estruturar um aplicativo que permitirá a troca de habilidades entre os usuários. Foi utilizado um framework com abordagem ágil, Scrum, para organizar e simplificar cada etapa do processo até a entrega. Foram utilizadas ferramentas como JIRA e FIGMA para planejamento e execução. As atividades foram organizadas em três seções: Relação de Ambientes de Trabalho, Controle de Versão e Gerenciamento do Projeto. Essa estrutura permite avaliar estrategicamente o progresso, identificar falhas e considerar melhorias ao longo do processo.
+Tendo em vista o cumprimento do objetivo deste projeto de estruturar um aplicativo que permitirá a troca de habilidades entre os usuários. Foi utilizado um framework com abordagem ágil, Scrum, para organizar e simplificar cada etapa do processo até a entrega. Foram utilizadas ferramentas como TRELLO e FIGMA para planejamento e execução. As atividades foram organizadas em três seções: Relação de Ambientes de Trabalho, Controle de Versão e Gerenciamento do Projeto. Essa estrutura permite avaliar estrategicamente o progresso, identificar falhas e considerar melhorias ao longo do processo.
 
 ## Relação de Ambientes de Trabalho
 
@@ -33,41 +33,11 @@ Tendo em vista o cumprimento do objetivo deste projeto de estruturar um aplicati
     </tr>
      <tr>
         <td>Gerenciamento do Projeto</td>
-        <td>JIRA</td>
-        <td>()</td>
+        <td>TRELLO/td>
+        <td>((https://trello.com/invite/b/wl1WNmiq/ATTI901c0ae89ee9162bf10fc3e337799066011507C9/etapa-2))</td>
    </tr>
 </table>
 
-## Controle de Versão
-
-A ferramenta de controle de versão adotada no projeto foi o
-[Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-foi utilizado para hospedagem do repositório.
-
-O projeto segue a seguinte convenção para o nome de branches:
-
-- `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
-
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
-
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
-
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
 
 ## Gerenciamento de Projeto
 <p>O time de desenvolvimento deste projeto optou por utilizar o framework com abordagem ágil, chamado de Scrum, para um melhor tratamento dos dados e estruturação do projeto. Organizando e priorizando o que deve ser realizado em cada etapa . Conforme descreve o Scrum Guide (2020), existem três papéis no Scrum, sendo o Product Owner, Scrum Master e Time de Desenvolvedores. </p>
@@ -102,13 +72,11 @@ O quadro scrum referente a Sprint 2, está representado abaixo no Jira conforme 
 As ferramentas empregadas no projeto são:
 
 - Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+  <p>Para edição do código será utilizado o VSCode, pois possui integração direta com o Github.</p>
+- Ferramentas de comunicação:
+  <p>A equipe fará a comunicação através do Dicord e Whatsapp.</p>
+- Ferramentas de desenho de tela (_wireframing_):
+  <p>Será utilizado o figma como ferramenta de desenho e wirefrimes.</p>
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
+
