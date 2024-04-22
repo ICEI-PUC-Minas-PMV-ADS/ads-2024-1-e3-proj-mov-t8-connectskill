@@ -6,17 +6,16 @@
 
 Este projeto está em estágio inicial de desenvolvimento e possui as seguintes funcionalidades implementadas:
 
-- Protótipo inicial da tela de login
-- Tab "Sobre"
-- Modal interativo
+- Tela de Login e Cadastro funcionais
+- Autenticação de usuário pelo firebase
+- Aba Interesses onde o usuário pode adicionar e deletar seus interesses 
+- Aba perfil, com informações sobre o usuário
 
 Tecnologias utilizadas:
 - TypeScript
 - React Native
 - Expo
-- Tamagui
-
-O projeto utilizará o framework Tamagui para componentes UI, porém ainda não foi integrado ao projeto.
+- Firebase (Firestore e Authetication)
 
 ## Pré-requisitos
 
@@ -28,7 +27,7 @@ Antes de executar o projeto, certifique-se de ter as seguintes dependências ins
 ## Como executar o projeto
 
 1. Clone o repositório: `git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill.git`
-2. Acesse a pasta do projeto: `cd src/ConnectSkill`
+2. Acesse a pasta do projeto: `cd src/ConnectSkillFireBase`
 3. Instale as dependências: `npm install`
 4. Inicie o servidor de desenvolvimento: `expo start`
 5. Caso utilize o android studio, rode o comando `npx react-native run-android`
