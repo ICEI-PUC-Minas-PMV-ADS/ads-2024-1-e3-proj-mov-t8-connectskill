@@ -10,7 +10,7 @@ O projeto está organizado da seguinte maneira:
 - `assets`: Esta pasta contém todos os recursos estáticos, como imagens e ícones.
 - `constants`: Esta pasta contém constantes que são usadas em todo o aplicativo.
 - `navigation`: Esta pasta contém a configuração de navegação do aplicativo.
-- `screens`: Esta pasta contém todas as telas do aplicativo.
+- `Telas`: Esta pasta contém todas as telas do aplicativo.
 
 ## Dependências
 
@@ -36,7 +36,7 @@ Para rodar o projeto ConnectSkill, é necessário configurar o ambiente de desen
 
 ### Executando o Projeto
 
-1. Abra o terminal na pasta raiz do projeto `connectSkill-puc/ads-2024-1-e3-proj-mov-t8-connectskill`.
+1. Abra o terminal na pasta raiz do projeto `connectSkill-puc/ads-2024-1-e3-proj-mov-t8-connectskill/src/ConnectSkillFireBase`.
 2. Execute o comando `npm install` ou `yarn` para instalar as dependências do projeto.
 3. Execute o comando `npm start` ou `yarn start` para iniciar o servidor de desenvolvimento do Expo.
 4. Aguarde até que o servidor seja iniciado e exiba um código QR no terminal.
