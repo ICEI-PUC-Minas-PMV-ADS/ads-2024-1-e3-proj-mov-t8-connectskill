@@ -17,6 +17,8 @@ Tecnologias utilizadas:
 - Expo
 - Firebase (Firestore e Authetication)
 
+Observação: As telas ainda não foram estilizadas.
+
 ## Pré-requisitos
 
 Antes de executar o projeto, certifique-se de ter as seguintes dependências instaladas:
