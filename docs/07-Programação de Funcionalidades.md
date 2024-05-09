@@ -19,6 +19,18 @@ Tecnologias utilizadas:
 
 Observação: As telas ainda não foram estilizadas.
 
+## Funcionalidades implementadas:
+
+# Tela de Login e cadastro:
+![9858f6f7-bd35-488b-9dac-3f114f30a14e](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/d00a7901-83c3-41e6-a279-f590d496933c)
+
+- Tela funcional, conta com autenticação de login e cadastro com a API de autenticação do Firebase
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/4c2645d0-b13b-44e2-bcaa-652c16af43e1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/5206fde8-7ffe-4f02-b01a-23df526c8402)
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/187f46d7-3926-4dc4-9fa3-a9f8c23e7f3b
+
+
 ## Pré-requisitos
 
 Antes de executar o projeto, certifique-se de ter as seguintes dependências instaladas:
