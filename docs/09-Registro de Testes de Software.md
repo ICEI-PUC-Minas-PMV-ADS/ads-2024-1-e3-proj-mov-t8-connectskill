@@ -5,37 +5,37 @@
 Os testes serão implementados conforme o Plano de Testes em conjunto com o desenvolvimento das funcionalidades. 
 Utilizaremos o Jest para realizar os testes das features, seguindo boas práticas de testes de software.
 
-## Protótipos iniciais
+# Testes de funcionalidades iniciais
 
-### Login 
+## Login 
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/187f46d7-3926-4dc4-9fa3-a9f8c23e7f3b
 
-## Avaliação
+### Avaliação
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-### Registro de interesses
+## Registro de interesses
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/41825524-1f33-49a7-9904-d8cc23d772aa
 
-## Avaliação
+### Avaliação
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-### Exclusão de interesses
+## Exclusão de interesses
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/0ea4e96f-8ec4-4c04-9da8-d29926399033
 
-## Avaliação
+### Avaliação
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
-### Logout
+## Logout
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/7ccfe026-2c3f-491c-b7f4-a3aea5012ab1
 
-## Avaliação
+### Avaliação
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
