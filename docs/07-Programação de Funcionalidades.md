@@ -38,7 +38,28 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill
 
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/1ca4bb90-89fe-431c-9383-90dcc3770b45
 
+- Credenciais salvas no Firebase:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/71f0c4f3-0817-45e9-9855-d7d108fd6914)
 
+# Tela de registro de interesses:
+
+- Tela onde o usuário pode cadastrar e deletar os interesses da sua conta, os interesses são persistidos em uma collection no firestore que guarda os interesses por usuário:
+
+- Vídeo demonstrando o processo de registro dos interesses por usuário, também a página de perfil e o processo de logout
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/41825524-1f33-49a7-9904-d8cc23d772aa
+
+- Estrutura dos dados no Firestore:
+
+ - A Collection de usuário guarda cada usuário com um identificador único:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/6ba2d690-878b-466d-8859-9c0507300875)
+
+ - Cada usuário possui seus interesses, também guardados com um identificador único:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/61bc8d53-2cd0-4113-90d8-0c5ddcbec2b9)
+(Interesse teste criado no vídeo demonstrativo)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/b05ca6a3-cf16-419d-af9c-aa25dd23041c)
+(Interesse tulio criado no vídeo demonstrativo)
 
 ## Pré-requisitos
 
