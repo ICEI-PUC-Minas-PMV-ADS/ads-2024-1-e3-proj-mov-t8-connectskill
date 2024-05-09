@@ -31,9 +31,11 @@ Observação: As telas ainda não foram estilizadas.
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/5206fde8-7ffe-4f02-b01a-23df526c8402)
 
 - Vídeo mostrando o processo de login com credenciais incorretas e depois com as credenciais corretas
+  
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/187f46d7-3926-4dc4-9fa3-a9f8c23e7f3b
 
 - Vídeo mostrando a tentativa do processo de login sem um cadastro realizado com as credenciais, logo após, realizando cadastro e logando com as credenciais
+
 https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/1ca4bb90-89fe-431c-9383-90dcc3770b45
 
 
