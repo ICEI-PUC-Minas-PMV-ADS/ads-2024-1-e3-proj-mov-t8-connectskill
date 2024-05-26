@@ -18,7 +18,7 @@ const Login = () => {
             Alert.alert('Sucesso!', 'Login realizado');
         } catch (error) {
             console.error(error);
-        }finally{
+        } finally {
             setLoading(false);
         }
     };
@@ -31,68 +31,89 @@ const Login = () => {
             Alert.alert('Sucesso!', 'Cadastro realizado');
         } catch (error) {
             console.error(error);
-        }finally{
+        } finally {
             setLoading(false);
         }
     };
 
+    return (
+        <SafeAreaView style={styles.container}>
+            <KeyboardAvoidingView behavior='padding'>
+                <Text style={styles.title}>
+                    Connect Skil
+                </Text>
+                <TextInput
+                    value={email}
+                    style={styles.input}
+                    placeholder='Email'
+                    onChangeText={(text) => setEmail(text)}
+                />
+                <TextInput
+                    value={password}
+                    style={styles.input}
+                    placeholder='Password'
+                    secureTextEntry={true}
+                    onChangeText={(text) => setPassword(text)}
+                />
 
-  return (
-    <View style={styles.container}>
-      <KeyboardAvoidingView behavior='padding'>
-      <Text
-      style={{fontSize: 30, marginBottom: 20}}
-      >
-        Connect Skill
-      </Text>
-      <TextInput
-        value={email}
-        style={styles.input} 
-        placeholder='Email'
-        onChangeText={(text) => setEmail(text)}
-      />
-      <TextInput
-        value={password}
-        style={styles.input} 
-        placeholder='Password'
-        secureTextEntry={true}
-        onChangeText={(text) => setPassword(text)}
-      />
+                {loading ? (
+                    <ActivityIndicator size='large' color='#000' />
+                ) : (
+                    <>
+                        <TouchableOpacity onPress={() => logar()}>
+                            <View style={styles.buttonContainer}>
+                                <Text style={styles.buttonText}>Logar</Text>
+                            </View>
+                        </TouchableOpacity>
 
-      { loading ? ( <ActivityIndicator size='large' color='#000' /> 
-      ) : ( 
-        <>
-            <View style={styles.buttonContainer}>
-                <Button title='Logar' onPress={() => logar()} />
-            </View>
-            <View style={styles.buttonContainer}>
-                <Button title='Criar Conta' onPress={() => registrar()} />
-            </View>
-        </>
-    )}
-    </KeyboardAvoidingView>
-    </View>
-  )
-}
+                        <TouchableOpacity onPress={() => registrar()}>
+                            <View style={styles.buttonContainer}>
+                                <Text style={styles.buttonText}>Criar Conta</Text>
+                            </View>
+                        </TouchableOpacity>
+                    </>
+                )}
+            </KeyboardAvoidingView>
+        </SafeAreaView>
+    );
+};
 
-export default Login
+export default Login;
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: 20,
         flex: 1,
         justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "#d1e4ef"
+    },
+    title: {
+        fontSize: 30,
+        marginBottom: 20,
+        textAlign: 'center'
     },
     input: {
         marginVertical: 7,
         height: 40,
+        width: 280,
         borderWidth: 1,
         borderRadius: 4,
         padding: 10,
-        backgroundColor: '#fff',
-    }, 
+        backgroundColor: '#f3f6f7',
+    },
     buttonContainer: {
-        marginVertical: 7
-    }
-})
+        width: 280,
+        height: 50,
+        marginTop: 5,
+        borderRadius: 20,
+        backgroundColor: '#3197ce',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    buttonText: {
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold',
+    },
+});
 
