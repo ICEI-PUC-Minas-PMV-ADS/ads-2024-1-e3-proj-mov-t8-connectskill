@@ -88,13 +88,15 @@ const List = ({ navigation }: RouterProps) => {
     };
       
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <FlatList
                 data={interesses}
                 renderItem={({ item }) => (
                     <View style={styles.itemContainer}>
                         <Text>{item.interesse}</Text>
-                            <Button title="Deletar" onPress={() => deletarInteresse(item.id)} />
+                            <TouchableOpacity onPress={() => deletarInteresse(item.id)} style={styles.button}>
+                                <Text style={styles.buttonText}>Deletar</Text>
+                            </TouchableOpacity>
                     </View>
                 )}
                 keyExtractor={item => item.id}
@@ -105,16 +107,16 @@ const List = ({ navigation }: RouterProps) => {
                 placeholder="Adicionar novo interesse"
                 style={styles.input}
             />
-            <View style={styles.buttonContainer}>
-                <Button title="Adicionar Interesse" onPress={adicionarInteresse} />
-            </View>
-            <View style={styles.buttonContainer}>
-                <Button title='Perfil' onPress={() => navigation.navigate('Perfil')} />
-            </View>
-            <View style={styles.buttonContainer}>
-                <Button title='Sair' color={"grey"} onPress={() => FIREBASE_AUTH.signOut()} />
-            </View>
-        </View>
+            <TouchableOpacity onPress={adicionarInteresse} style={styles.button}>
+                <Text style={styles.buttonText}>Adicionar Interesse</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Perfil')} style={styles.button}>
+                <Text style={styles.buttonText}>Perfil</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => FIREBASE_AUTH.signOut()} style={styles.button}>
+                <Text style={styles.buttonText}>Sair</Text>
+            </TouchableOpacity>
+        </SafeAreaView>
     );
 }
 
@@ -122,9 +124,12 @@ export default List
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      padding: 10,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "#d1e4ef"
     },
+
     itemContainer: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -140,8 +145,21 @@ const styles = StyleSheet.create({
       padding: 10,
       borderColor: '#ccc',
       borderRadius: 5,
+      width: '80%', 
+      backgroundColor: '#f3f6f7',
     },
-    buttonContainer: {
+    button: {
       marginVertical: 5,
+      width: '80%',
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 20,
+      backgroundColor: '#3197ce',
+    },
+    buttonText: {
+      color: 'white',
+      fontSize: 16,
+      fontWeight: 'bold',
     },
   });
