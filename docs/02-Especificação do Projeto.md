@@ -212,6 +212,39 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
   </tr>
 </table>
 
+## Descrição do Processo BPMN
+
+### 1. Página de Login
+- **Start Event:** O processo começa na página de login onde o usuário tem a opção de logar ou registrar-se na plataforma.
+- **Gateway: Logar ou Registrar?** 
+  - **Logar:** Se o usuário já possui uma conta, ele pode escolher logar.
+  - **Registrar:** Se o usuário não possui uma conta, ele pode escolher registrar-se.
+
+### 2. Página Inicial
+- Após o login ou registro, o usuário é direcionado para a página inicial.
+- **Intermediate Event: Página Inicial**
+
+### 3. Funcionalidades Disponíveis na Página Inicial
+- **Task: Registrar Interesse**
+  - O usuário pode registrar seus interesses na plataforma.
+- **Task: Visualizar Perfil**
+  - O usuário pode visualizar seu perfil e verificar suas informações.
+- **Task: Deletar Interesse**
+  - O usuário pode deletar seus interesses previamente registrados.
+- **Task: Deslogar**
+  - O usuário pode deslogar da plataforma.
+
+### 4. Fim da Sessão
+- **End Event: Fim da Sessão**
+  - O processo termina quando o usuário escolhe deslogar da plataforma.
+
+### Diagrama BPMN
+
+Segue a representação visual do processo em BPMN:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/c64f84da-9b2d-432c-99a2-28e63dff0de8)
+
+"""
 
 # Gerenciamento de Projeto
 
