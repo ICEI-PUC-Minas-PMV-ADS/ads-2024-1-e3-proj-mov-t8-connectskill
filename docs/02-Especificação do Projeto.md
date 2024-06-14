@@ -244,7 +244,7 @@ Segue a representação visual do processo em BPMN:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/c64f84da-9b2d-432c-99a2-28e63dff0de8)
 
-## Descrição do Processo BPMN para o Projeto ConnectSkill
+## Descrição do Processo BPMN Situação Futura
 
 ### 1. Página de Login
 - **Start Event:** O processo começa na página de login onde o usuário tem a opção de registrar ou logar na plataforma.
