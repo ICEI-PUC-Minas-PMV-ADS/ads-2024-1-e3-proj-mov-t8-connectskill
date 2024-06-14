@@ -242,7 +242,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 Segue a representação visual do processo em BPMN:
 
-
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/c64f84da-9b2d-432c-99a2-28e63dff0de8)
 
 ## Descrição do Processo BPMN para o Projeto ConnectSkill
 
