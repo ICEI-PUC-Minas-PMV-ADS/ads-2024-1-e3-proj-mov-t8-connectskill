@@ -212,7 +212,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
   </tr>
 </table>
 
-## Descrição do Processo BPMN futuro
+## Descrição do Processo BPMN atual
 
 ### 1. Página de Login
 - **Start Event:** O processo começa na página de login onde o usuário tem a opção de logar ou registrar-se na plataforma.
