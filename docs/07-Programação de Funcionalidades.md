@@ -6,17 +6,61 @@
 
 Este projeto está em estágio inicial de desenvolvimento e possui as seguintes funcionalidades implementadas:
 
-- Protótipo inicial da tela de login
-- Tab "Sobre"
-- Modal interativo
+- Tela de Login e Cadastro funcionais
+- Autenticação de usuário pelo firebase
+- Aba Interesses onde o usuário pode adicionar e deletar seus interesses 
+- Aba perfil, com informações sobre o usuário
 
 Tecnologias utilizadas:
 - TypeScript
 - React Native
 - Expo
-- Tamagui
+- Firebase (Firestore e Authetication)
 
-O projeto utilizará o framework Tamagui para componentes UI, porém ainda não foi integrado ao projeto.
+Observação: As telas ainda não foram estilizadas.
+
+## Funcionalidades implementadas:
+
+# Tela de Login e cadastro:
+
+- Tela funcional, conta com autenticação de login e cadastro com a API de autenticação do Firebase****
+![9858f6f7-bd35-488b-9dac-3f114f30a14e](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/d00a7901-83c3-41e6-a279-f590d496933c)
+
+- Configurações da autenticação do console do projeto no firebase:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/4c2645d0-b13b-44e2-bcaa-652c16af43e1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/5206fde8-7ffe-4f02-b01a-23df526c8402)
+
+- Vídeo mostrando o processo de login com credenciais incorretas e depois com as credenciais corretas
+  
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/187f46d7-3926-4dc4-9fa3-a9f8c23e7f3b
+
+- Vídeo mostrando a tentativa do processo de login sem um cadastro realizado com as credenciais, logo após, realizando cadastro e logando com as credenciais
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/1ca4bb90-89fe-431c-9383-90dcc3770b45
+
+- Credenciais salvas no Firebase:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/71f0c4f3-0817-45e9-9855-d7d108fd6914)
+
+# Tela de registro de interesses:
+
+- Tela onde o usuário pode cadastrar e deletar os interesses da sua conta, os interesses são persistidos em uma collection no firestore que guarda os interesses por usuário:
+
+- Vídeo demonstrando o processo de registro dos interesses por usuário, também a página de perfil e o processo de logout
+
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/41825524-1f33-49a7-9904-d8cc23d772aa
+
+# Estrutura dos dados no Firestore:
+
+- A Collection de usuário guarda cada usuário com um identificador único:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/6ba2d690-878b-466d-8859-9c0507300875)
+
+- Cada usuário possui seus interesses, também guardados com um identificador único:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/61bc8d53-2cd0-4113-90d8-0c5ddcbec2b9)
+(Interesse teste criado no vídeo demonstrativo)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/b05ca6a3-cf16-419d-af9c-aa25dd23041c)
+(Interesse tulio criado no vídeo demonstrativo)
 
 ## Pré-requisitos
 
@@ -28,7 +72,7 @@ Antes de executar o projeto, certifique-se de ter as seguintes dependências ins
 ## Como executar o projeto
 
 1. Clone o repositório: `git clone https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill.git`
-2. Acesse a pasta do projeto: `cd src/ConnectSkill`
+2. Acesse a pasta do projeto: `cd src/ConnectSkillFireBase`
 3. Instale as dependências: `npm install`
 4. Inicie o servidor de desenvolvimento: `expo start`
 5. Caso utilize o android studio, rode o comando `npx react-native run-android`
