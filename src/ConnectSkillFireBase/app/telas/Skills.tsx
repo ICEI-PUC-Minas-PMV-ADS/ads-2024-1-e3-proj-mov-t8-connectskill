@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button, TextInput, FlatList } from 'react-native';
+import { View, Text, StyleSheet, TextInput, FlatList, TouchableOpacity } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { NavigationProp } from '@react-navigation/native';
 import { collection, Firestore, addDoc, deleteDoc, doc, onSnapshot, getDocs, updateDoc } from 'firebase/firestore';
@@ -119,17 +119,23 @@ const Skills = ({ navigation }: RouterProps) => {
                   value={editingValue}
                   onChangeText={setEditingValue}
                 />
-                <Button title="Salvar" onPress={() => editarHabilidade(item.id, editingValue)} />
+                <TouchableOpacity style={styles.saveButton} onPress={() => editarHabilidade(item.id, editingValue)}>
+                  <Text style={styles.buttonText}>Salvar</Text>
+                </TouchableOpacity>
               </>
             ) : (
               <>
                 <Text style={styles.itemText}>{item.habilidade}</Text>
                 <View style={styles.buttonGroup}>
-                  <Button title="Deletar" onPress={() => deletarHabilidade(item.id)} />
-                  <Button title="Editar" onPress={() => {
+                  <TouchableOpacity style={styles.deleteButton} onPress={() => deletarHabilidade(item.id)}>
+                    <Text style={styles.buttonText}>Deletar</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.editButton} onPress={() => {
                     setEditingId(item.id);
                     setEditingValue(item.habilidade);
-                  }} />
+                  }}>
+                    <Text style={styles.buttonText}>Editar</Text>
+                  </TouchableOpacity>
                 </View>
               </>
             )}
@@ -143,9 +149,9 @@ const Skills = ({ navigation }: RouterProps) => {
         placeholder="Adicionar nova habilidade"
         style={styles.input}
       />
-      <View style={styles.buttonContainer}>
-        <Button title="Adicionar Habilidade" onPress={adicionarHabilidade} />
-      </View>
+      <TouchableOpacity style={styles.addButton} onPress={adicionarHabilidade}>
+        <Text style={styles.buttonText}>Adicionar Habilidade</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -155,7 +161,8 @@ export default Skills;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    padding: 20,
+    backgroundColor: '#f0f0f0',
   },
   itemContainer: {
     flexDirection: 'row',
@@ -163,14 +170,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 15,
     marginVertical: 5,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#fff',
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
   },
   itemText: {
     flex: 1,
     fontSize: 16,
+    color: '#333',
   },
   buttonGroup: {
     flexDirection: 'row',
@@ -182,9 +193,34 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderColor: '#ccc',
-    borderRadius: 5,
+    borderRadius: 8,
+    backgroundColor: '#fff',
   },
-  buttonContainer: {
-    marginVertical: 5,
+  addButton: {
+    backgroundColor: '#4CAF50',
+    padding: 15,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  saveButton: {
+    backgroundColor: '#2196F3',
+    padding: 10,
+    borderRadius: 8,
+  },
+  deleteButton: {
+    backgroundColor: '#f44336',
+    padding: 10,
+    borderRadius: 8,
+    marginRight: 10,
+  },
+  editButton: {
+    backgroundColor: '#FF9800',
+    padding: 10,
+    borderRadius: 8,
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });

@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { FIREBASE_AUTH } from './FirebaseConfig';
 import { User, onAuthStateChanged } from 'firebase/auth';
+import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import Login from './app/telas/Login';
 import Register from './app/telas/Register';
 import List from './app/telas/List';
@@ -14,6 +15,12 @@ import ConnectList from './app/telas/ConnectList';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+const TooltipButton = ({ message }: { message: string }) => (
+  <TouchableOpacity onPress={() => Alert.alert('Info', message)}>
+    <Ionicons name="information-circle-outline" size={24} color="black" style={{ marginRight: 15 }} />
+  </TouchableOpacity>
+);
 
 function HomeTabs() {
   return (
@@ -35,6 +42,18 @@ function HomeTabs() {
           }
 
           return <Ionicons name={iconName} size={size} color={color} />;
+        },
+        headerRight: () => {
+          const message = route.name === 'Connect'
+            ? 'Aqui você pode conectar com outros usuários, visualizar interesses e habilidades deles.'
+            : route.name === 'Meus Interesses'
+              ? 'Nesta aba, você pode adicionar, editar e remover seus interesses.'
+              : route.name === 'Minhas Habilidades'
+                ? 'Nesta aba, você pode adicionar, editar e remover suas habilidades.'
+                : route.name === 'Perfil'
+                  ? 'Nesta aba, você pode visualizar e editar seu perfil, bem como sair da conta.'
+                  : '';
+          return <TooltipButton message={message} />;
         },
       })}
     >

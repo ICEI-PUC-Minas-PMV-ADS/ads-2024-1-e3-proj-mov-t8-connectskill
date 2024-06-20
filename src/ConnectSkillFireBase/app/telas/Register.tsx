@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView, Alert } from 'react-native';
+import { View, Text, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView, Alert, TouchableOpacity } from 'react-native';
 import { FIREBASE_AUTH, FIREBASE_DB } from '../../FirebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc, doc, setDoc } from 'firebase/firestore';
+import { Ionicons } from '@expo/vector-icons';
+import { NavigationProp } from '@react-navigation/native';
 
-const Register = () => {
+interface RegisterProps {
+  navigation: NavigationProp<any, any>;
+}
+
+const Register = ({ navigation }: RegisterProps) => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
@@ -44,9 +50,15 @@ const Register = () => {
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView behavior='padding'>
-        <Text style={styles.title}>
-          Connect Skill - Registrar
-        </Text>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Ionicons name="arrow-back" size={24} color="black" />
+          <Text style={styles.backButtonText}>Voltar</Text>
+        </TouchableOpacity>
+        <View style={styles.header}>
+          <Ionicons name="people-circle-outline" size={50} color="#000" />
+          <Text style={styles.title}>Connect Skill</Text>
+        </View>
+        <Text style={styles.slogan}>Connect-se e compartilhe suas habilidades com outras pessoas!</Text>
         <TextInput
           value={name}
           style={styles.input}
@@ -90,21 +102,45 @@ export default Register;
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 20,
     flex: 1,
     justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#f0f0f0',
+  },
+  backButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'absolute',
+    top: -130,
+    left: 0,
+  },
+  backButtonText: {
+    marginLeft: 5,
+    fontSize: 16,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
   },
   title: {
     fontSize: 30,
-    marginBottom: 20,
+    marginLeft: 10,
+  },
+  slogan: {
+    fontSize: 18,
     textAlign: 'center',
+    marginBottom: 20,
+    color: '#666',
   },
   input: {
     marginVertical: 7,
     height: 40,
     borderWidth: 1,
-    borderRadius: 4,
+    borderRadius: 8,
     padding: 10,
+    borderColor: '#ccc',
     backgroundColor: '#fff',
   },
   buttonContainer: {
