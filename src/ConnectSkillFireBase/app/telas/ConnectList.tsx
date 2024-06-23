@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Modal, Button, TextInput } from 'react-native';
-import { collection, getDocs, Firestore } from 'firebase/firestore';
-import { FIREBASE_DB } from '../../FirebaseConfig';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, Modal, Button, TextInput, Alert } from 'react-native';
+import { collection, getDocs, Firestore, addDoc, doc, query, where } from 'firebase/firestore';
+import { FIREBASE_DB, FIREBASE_AUTH } from '../../FirebaseConfig';
 import { Ionicons } from '@expo/vector-icons';
 
 interface User {
@@ -28,7 +28,6 @@ const ConnectList = () => {
   const [filteredUsers, setFilteredUsers] = useState<User[]>([]);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
-  const [connectModalVisible, setConnectModalVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const firestore: Firestore = FIREBASE_DB;
@@ -40,9 +39,9 @@ const ConnectList = () => {
         const usersSnapshot = await getDocs(usersCollection);
 
         if (usersSnapshot.empty) {
-          console.log("No users found in Firestore collection 'Usuarios'");
+          console.log("Usuarios nao encontrados na collection 'Usuarios' no Firestore");
         } else {
-          console.log(`Found ${usersSnapshot.size} users`);
+          console.log(`${usersSnapshot.size} Usuarios encontrados`);
         }
 
         const usersList = await Promise.all(
@@ -56,17 +55,17 @@ const ConnectList = () => {
 
             const interesses = interessesSnapshot.docs.map(doc => ({
               id: doc.id,
-              interesse: doc.data().interesse || 'No interesse',
+              interesse: doc.data().interesse || 'Sem interesses',
             }));
 
             const habilidades = habilidadesSnapshot.docs.map(doc => ({
               id: doc.id,
-              habilidade: doc.data().habilidade || 'No habilidade',
+              habilidade: doc.data().habilidade || 'Sem habilidades',
             }));
 
             return {
               id: doc.id,
-              name: data.name || 'No name',
+              name: data.name || 'Sem name',
               email: data.email,
               celular: data.celular,
               interesses,
@@ -77,9 +76,9 @@ const ConnectList = () => {
 
         setUsers(usersList);
         setFilteredUsers(usersList);
-        console.log('Fetched users:', usersList);
+        console.log('Usuarios:', usersList);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Erro ao fazer fetch dos usuarios:", error);
       }
     };
 
@@ -105,18 +104,37 @@ const ConnectList = () => {
     setModalVisible(true);
   };
 
-  const handleConnectPress = () => {
+  const handleConnectPress = async () => {
+    if (FIREBASE_AUTH.currentUser && selectedUser) {
+      try {
+        const userDocRef = doc(firestore, 'Usuarios', FIREBASE_AUTH.currentUser.uid);
+        const conexoesCollectionRef = collection(userDocRef, 'Conexoes');
+        
+        // Verifica se a conexão já existe
+        const q = query(conexoesCollectionRef, where('connectedUserId', '==', selectedUser.id));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          Alert.alert('Atenção', 'Você já está conectado com este usuário.');
+        } else {
+          await addDoc(conexoesCollectionRef, {
+            connectedUserId: selectedUser.id,
+          });
+          Alert.alert('Sucesso!', 'Conexão adicionada');
+        }
+      } catch (error) {
+        console.error("Erro ao fazer conexao:", error);
+        Alert.alert('Erro', 'Não foi possível adicionar a conexão');
+      }
+    } else {
+      Alert.alert('Erro', 'Usuário não autenticado ou usuário selecionado inválido');
+    }
+
     setModalVisible(false);
-    setConnectModalVisible(true);
   };
 
   const closeModal = () => {
     setModalVisible(false);
-    setSelectedUser(null);
-  };
-
-  const closeConnectModal = () => {
-    setConnectModalVisible(false);
     setSelectedUser(null);
   };
 
@@ -147,60 +165,40 @@ const ConnectList = () => {
       )}
 
       {selectedUser && (
-        <>
-          <Modal
-            animationType="slide"
-            transparent={true}
-            visible={modalVisible}
-            onRequestClose={closeModal}
-          >
-            <View style={styles.modalContainer}>
-              <View style={styles.modalContent}>
-                <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
-                  <Ionicons name="close" size={24} color="black" />
-                </TouchableOpacity>
-                <Text style={styles.modalTitle}>{selectedUser.name}</Text>
-                <Text style={styles.sectionTitle}>Interesses</Text>
-                {selectedUser.interesses.length === 0 ? (
-                  <Text style={styles.itemText}>No interests found</Text>
-                ) : (
-                  selectedUser.interesses.map(interesse => (
-                    <Text key={interesse.id} style={styles.itemText}>{interesse.interesse}</Text>
-                  ))
-                )}
-                <Text style={styles.sectionTitle}>Habilidades</Text>
-                {selectedUser.habilidades.length === 0 ? (
-                  <Text style={styles.itemText}>No skills found</Text>
-                ) : (
-                  selectedUser.habilidades.map(habilidade => (
-                    <Text key={habilidade.id} style={styles.itemText}>{habilidade.habilidade}</Text>
-                  ))
-                )}
-                <View style={styles.connectButtonContainer}>
-                  <Button title="Connect" onPress={handleConnectPress} />
-                </View>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={closeModal}
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <TouchableOpacity style={styles.closeButton} onPress={closeModal}>
+                <Ionicons name="close" size={24} color="black" />
+              </TouchableOpacity>
+              <Text style={styles.modalTitle}>{selectedUser.name}</Text>
+              <Text style={styles.sectionTitle}>Interesses</Text>
+              {selectedUser.interesses.length === 0 ? (
+                <Text style={styles.itemText}>No interests found</Text>
+              ) : (
+                selectedUser.interesses.map(interesse => (
+                  <Text key={interesse.id} style={styles.itemText}>{interesse.interesse}</Text>
+                ))
+              )}
+              <Text style={styles.sectionTitle}>Habilidades</Text>
+              {selectedUser.habilidades.length === 0 ? (
+                <Text style={styles.itemText}>No skills found</Text>
+              ) : (
+                selectedUser.habilidades.map(habilidade => (
+                  <Text key={habilidade.id} style={styles.itemText}>{habilidade.habilidade}</Text>
+                ))
+              )}
+              <View style={styles.connectButtonContainer}>
+                <Button title="Connect" onPress={handleConnectPress} />
               </View>
             </View>
-          </Modal>
-
-          <Modal
-            animationType="slide"
-            transparent={true}
-            visible={connectModalVisible}
-            onRequestClose={closeConnectModal}
-          >
-            <View style={styles.modalContainer}>
-              <View style={styles.modalContent}>
-                <TouchableOpacity style={styles.closeButton} onPress={closeConnectModal}>
-                  <Ionicons name="close" size={24} color="black" />
-                </TouchableOpacity>
-                <Text style={styles.modalTitle}>{selectedUser.name}</Text>
-                <Text style={styles.itemText}><Text style={styles.bold}>Email:</Text> {selectedUser.email}</Text>
-                <Text style={styles.itemText}><Text style={styles.bold}>Celular:</Text> {selectedUser.celular}</Text>
-              </View>
-            </View>
-          </Modal>
-        </>
+          </View>
+        </Modal>
       )}
     </View>
   );
