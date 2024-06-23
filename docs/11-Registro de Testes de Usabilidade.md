@@ -74,6 +74,19 @@ https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill
 A navegação entre abas pela navbar funciona de forma fluida e intuitiva. Os ícones e labels das abas estão corretos e cada aba leva à sua respectiva tela.
 As tooltips em cada aba fornecem informações úteis sobre as funcionalidades disponíveis em cada tela. As tooltips aparecem corretamente ao interagir com os ícones das abas e melhoram a usabilidade do aplicativo.
 
+# Testes de funcionalidades Etapa 5
+
+## Validaçao de campos de registro de usuário
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/959c6113-3ec2-482c-ab36-9738f02524e0
+
+### Avaliação
+As validações sao aplicadas corretamente, abrindo um modal de instruções quando algum campo está incorreto.
+
+## Conexão com outros usuários
+https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/93f2b0b0-b4db-4960-bb37-2a9e75be1e61
+
+### Avaliação
+A conexão funciona conforme esperado, realizando a conexão quando possível e não realizando quando a conexão ja foi feita, além disso, no perfil do usuário é possível visualizar a lista das conexões já feitas.
 
 ## Gráficos 
 
