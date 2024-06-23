@@ -30,12 +30,12 @@ const mockProps = {
   },
 };
 
-describe('Register Component', () => {
+describe('componente de registro', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('should render the Register component correctly', () => {
+  it('deve renderizar o componente de registro', () => {
     const { getByPlaceholderText, getByText } = render(
       <NavigationContainer>
         <Register {...mockProps} />
@@ -49,7 +49,7 @@ describe('Register Component', () => {
     expect(getByText('Registrar')).toBeTruthy();
   });
 
-  it('should show an error message when the name is too long', async () => {
+  it('deve mostrar um erro quando o nome é muito longo', async () => {
     const { getByPlaceholderText, getByText, findByText } = render(
       <NavigationContainer>
         <Register {...mockProps} />
@@ -66,7 +66,7 @@ describe('Register Component', () => {
     expect(await findByText('O nome deve ter no máximo 50 caracteres.')).toBeTruthy();
   });
 
-  it('should show an error message when the email is invalid', async () => {
+  it('deve mostrar um erro quando o email é inválido', async () => {
     const { getByPlaceholderText, getByText, findByText } = render(
       <NavigationContainer>
         <Register {...mockProps} />
@@ -83,7 +83,7 @@ describe('Register Component', () => {
     expect(await findByText('Por favor, insira um email válido.')).toBeTruthy();
   });
 
-  it('should show an error message when the celular is invalid', async () => {
+  it('deve mostrar um erro quando o velular é inválido', async () => {
     const { getByPlaceholderText, getByText, findByText } = render(
       <NavigationContainer>
         <Register {...mockProps} />
@@ -100,7 +100,7 @@ describe('Register Component', () => {
     expect(await findByText('Por favor, insira um número de celular válido no formato DDD + Celular, por exemplo 31912344321.')).toBeTruthy();
   });
 
-  it('should show an error message when the password is invalid', async () => {
+  it('deve mostrar um erro quando a senha é inválido', async () => {
     const { getByPlaceholderText, getByText, findByText } = render(
       <NavigationContainer>
         <Register {...mockProps} />
@@ -117,7 +117,7 @@ describe('Register Component', () => {
     expect(await findByText('A senha deve ter no mínimo 6 caracteres, com pelo menos um número e um caractere especial.')).toBeTruthy();
   });
 
-  it('should call createUserWithEmailAndPassword with the correct parameters', async () => {
+  it('deve chamar a funçao createUserWithEmailAndPassword com os parametros corretos', async () => {
     (createUserWithEmailAndPassword as jest.Mock).mockResolvedValueOnce({
       user: { uid: '123' },
     });
