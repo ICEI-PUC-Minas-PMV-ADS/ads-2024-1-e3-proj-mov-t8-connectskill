@@ -24,6 +24,7 @@ const Skills = ({ navigation }: RouterProps) => {
   const [novaHabilidade, setNovaHabilidade] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editingValue, setEditingValue] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   const firestore: Firestore = FIREBASE_DB;
 
@@ -51,8 +52,14 @@ const Skills = ({ navigation }: RouterProps) => {
   }, []);
 
   const MAX_SKILLS = 5; // Define o número máximo de habilidades permitido
+  const MAX_HABILIDADE_LENGTH = 20;
 
   const adicionarHabilidade = async () => {
+    if (novaHabilidade.trim().length > MAX_HABILIDADE_LENGTH) {
+      setError("A habilidade deve ter no máximo 20 caracteres.");
+      return;
+    }
+
     if (novaHabilidade.trim().length > 0 && FIREBASE_AUTH.currentUser?.uid) {
       try {
         // Busca o número atual de habilidades
@@ -66,18 +73,24 @@ const Skills = ({ navigation }: RouterProps) => {
             habilidade: novaHabilidade
           });
           setNovaHabilidade("");
+          setError(null);
         } else {
-          console.error("Limite de habilidades atingido.");
+          setError("Limite de habilidades atingido.");
         }
       } catch (error) {
         console.error("Erro ao adicionar habilidade:", error);
       }
     } else {
-      console.error("Erro ao adicionar habilidade: usuário não autenticado ou uid indefinido");
+      setError("Erro ao adicionar habilidade: usuário não autenticado ou uid indefinido");
     }
   };
 
   const editarHabilidade = async (habilidadeId: string, novoValor: string) => {
+    if (novoValor.trim().length > MAX_HABILIDADE_LENGTH) {
+      setError("A habilidade deve ter no máximo 20 caracteres.");
+      return;
+    }
+
     if (novoValor.trim().length > 0 && FIREBASE_AUTH.currentUser?.uid && habilidadeId) {
       try {
         const habilidadeRef = doc(firestore, 'Usuarios', FIREBASE_AUTH.currentUser.uid, 'Habilidades', habilidadeId);
@@ -86,11 +99,12 @@ const Skills = ({ navigation }: RouterProps) => {
         });
         setEditingId(null);
         setEditingValue("");
+        setError(null);
       } catch (error) {
         console.error("Erro ao editar habilidade:", error);
       }
     } else {
-      console.error("Erro ao editar habilidade: usuário não autenticado, uid indefinido, ou id da habilidade indefinido");
+      setError("Erro ao editar habilidade: usuário não autenticado, uid indefinido, ou id da habilidade indefinido");
     }
   };
 
@@ -108,6 +122,7 @@ const Skills = ({ navigation }: RouterProps) => {
 
   return (
     <View style={styles.container}>
+      {error && <Text style={styles.errorText}>{error}</Text>}
       <FlatList
         data={habilidades}
         renderItem={({ item }) => (
@@ -163,6 +178,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#f0f0f0',
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   itemContainer: {
     flexDirection: 'row',

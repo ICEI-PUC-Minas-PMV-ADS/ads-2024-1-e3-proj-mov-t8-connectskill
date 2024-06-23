@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView, Alert, Image } from 'react-native';
+import { View, Text, StyleSheet, TextInput, ActivityIndicator, Button, KeyboardAvoidingView, Alert } from 'react-native';
 import { FIREBASE_AUTH } from '../../FirebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { NavigationProp } from '@react-navigation/native';
@@ -16,7 +16,17 @@ const Login = ({ navigation }: LoginProps) => {
 
   const auth = FIREBASE_AUTH;
 
+  const validateEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
   const logar = async () => {
+    if (!validateEmail(email)) {
+      Alert.alert('Erro', 'Por favor, insira um email válido.');
+      return;
+    }
+
     setLoading(true);
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
@@ -24,6 +34,7 @@ const Login = ({ navigation }: LoginProps) => {
       Alert.alert('Sucesso!', 'Login realizado');
     } catch (error) {
       console.error(error);
+      Alert.alert('Erro', 'Não foi possível realizar o login. Verifique suas credenciais.');
     } finally {
       setLoading(false);
     }
@@ -41,6 +52,7 @@ const Login = ({ navigation }: LoginProps) => {
           value={email}
           style={styles.input}
           placeholder='Email'
+          keyboardType='email-address'
           onChangeText={(text) => setEmail(text)}
         />
         <TextInput

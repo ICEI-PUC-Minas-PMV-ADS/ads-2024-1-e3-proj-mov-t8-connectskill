@@ -24,6 +24,7 @@ const List = ({ navigation }: RouterProps) => {
   const [novoInteresse, setNovoInteresse] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editingValue, setEditingValue] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   const firestore: Firestore = FIREBASE_DB;
 
@@ -51,8 +52,14 @@ const List = ({ navigation }: RouterProps) => {
   }, []);
 
   const MAX_INTERESTS = 5;
+  const MAX_INTERESSE_LENGTH = 20;
 
   const adicionarInteresse = async () => {
+    if (novoInteresse.trim().length > MAX_INTERESSE_LENGTH) {
+      setError("O interesse deve ter no máximo 20 caracteres.");
+      return;
+    }
+
     if (novoInteresse.trim().length > 0 && FIREBASE_AUTH.currentUser?.uid) {
       try {
         const currentInterestsSnapshot = await getDocs(collection(firestore, 'Usuarios', FIREBASE_AUTH.currentUser.uid, 'Interesses'));
@@ -63,18 +70,24 @@ const List = ({ navigation }: RouterProps) => {
             interesse: novoInteresse
           });
           setNovoInteresse("");
+          setError(null);
         } else {
-          console.error("Limit of interests reached.");
+          setError("Limite de interesses atingido.");
         }
       } catch (error) {
         console.error("erro ao adicionar interesse:", error);
       }
     } else {
-      console.error("erro ao adicionar interesse: usuário nao autenticado ou uid indefinido");
+      setError("Erro ao adicionar interesse: usuário nao autenticado ou uid indefinido");
     }
   };
 
   const editarInteresse = async (interesseId: string, novoValor: string) => {
+    if (novoValor.trim().length > MAX_INTERESSE_LENGTH) {
+      setError("O interesse deve ter no máximo 20 caracteres.");
+      return;
+    }
+
     if (novoValor.trim().length > 0 && FIREBASE_AUTH.currentUser?.uid && interesseId) {
       try {
         const interesseRef = doc(firestore, 'Usuarios', FIREBASE_AUTH.currentUser.uid, 'Interesses', interesseId);
@@ -83,11 +96,12 @@ const List = ({ navigation }: RouterProps) => {
         });
         setEditingId(null);
         setEditingValue("");
+        setError(null);
       } catch (error) {
         console.error("erro ao editar interesse:", error);
       }
     } else {
-      console.error("erro ao editar interesse: usuário não autenticado, uid indefinido, ou id do interesse indefinido");
+      setError("Erro ao editar interesse: usuário não autenticado, uid indefinido, ou id do interesse indefinido");
     }
   };
 
@@ -105,6 +119,7 @@ const List = ({ navigation }: RouterProps) => {
 
   return (
     <View style={styles.container}>
+      {error && <Text style={styles.errorText}>{error}</Text>}
       <FlatList
         data={interesses}
         renderItem={({ item }) => (
@@ -160,6 +175,11 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#f0f0f0',
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   itemContainer: {
     flexDirection: 'row',

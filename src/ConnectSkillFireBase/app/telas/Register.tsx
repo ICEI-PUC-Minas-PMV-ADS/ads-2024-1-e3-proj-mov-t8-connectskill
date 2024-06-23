@@ -19,7 +19,42 @@ const Register = ({ navigation }: RegisterProps) => {
 
   const auth = FIREBASE_AUTH;
 
+  const validateEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const validateCelular = (celular: string) => {
+    const regex = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+    return regex.test(celular);
+  };
+
+  const validatePassword = (password: string) => {
+    const regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{6,}$/;
+    return regex.test(password);
+  };
+
   const registrar = async () => {
+    if (name.length > 50) {
+      Alert.alert('Erro', 'O nome deve ter no máximo 50 caracteres.');
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      Alert.alert('Erro', 'Por favor, insira um email válido.');
+      return;
+    }
+
+    if (!validateCelular(celular)) {
+      Alert.alert('Erro', 'Por favor, insira um número de celular válido no formato DDD + Celular, por exemplo 31912344321.');
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      Alert.alert('Erro', 'A senha deve ter no mínimo 6 caracteres, com pelo menos um número e um caractere especial.');
+      return;
+    }
+
     setLoading(true);
     try {
       const response = await createUserWithEmailAndPassword(auth, email, password);
@@ -70,6 +105,7 @@ const Register = ({ navigation }: RegisterProps) => {
           style={styles.input}
           placeholder='Email'
           onChangeText={(text) => setEmail(text)}
+          keyboardType='email-address'
         />
         <TextInput
           value={celular}
