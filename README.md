@@ -4,7 +4,7 @@
 
 `Eixo 3 - Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`3`
+`Terceiro Período`
 
 ConnectSkill é um aplicativo que busca conectar usuários que tem interesse de compartilhar suas habilidades, possibilitando a troca de conhecimento entre pessoas com interesses em comum.
 
