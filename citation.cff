@@ -1,0 +1,16 @@
+message: Please cite this software using these metadata.
+title: Connect Skill
+authors:
+  - family-names: Barros Palacine
+    given-names: Tulio
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: de Macêdo Neto
+    given-names: Cristiano
+keywords:
+  - Educação
+  - Habilidades
+  - Interesses
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill
+version: 1.0.0
+date-released: 2024-06-23
