@@ -4,12 +4,18 @@
 
 # ConnectSkill
 
-Este projeto está em estágio inicial de desenvolvimento e possui as seguintes funcionalidades implementadas:
+O Projeto está em estágio final e possui as seguintes funcionalidades implementadas:
 
-- Tela de Login e Cadastro funcionais
-- Autenticação de usuário pelo firebase
-- Aba Interesses onde o usuário pode adicionar e deletar seus interesses 
-- Aba perfil, com informações sobre o usuário
+- Tela de Login e Cadastro funcionais.
+- Validação dos campos por regex.
+- Autenticação de usuário pelo firebase.
+- Aba Interesses onde o usuário pode adicionar, editar e deletar seus interesses.
+- Aba Habilidades onde o usuário pode adicionar, editar e deletar suas habilidades. 
+- Aba perfil, com informações sobre o usuário, interesses, habilidades e conexoes.
+- Aba Connect, onde o usuário pode ver uma lista com informações sobre os outros usuários e efetuar uma conexão.
+- Barra de navegaçao inferior, onde o usuário pode navegar entre as abas do aplicativo.
+- Filtro de usuários por interesse e habilidade.
+- Tooltips para cada aba.
 
 Tecnologias utilizadas:
 - TypeScript
