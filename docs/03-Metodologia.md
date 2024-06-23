@@ -21,16 +21,6 @@ Tendo em vista o cumprimento do objetivo deste projeto de estruturar um aplicati
         <td>Github</td>
         <td>(https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill)</td>
     </tr>
-    <tr>
-        <td>Documentos do projeto</td>
-        <td>Google Drive</td>
-        <td>(https://docs.google.com/document/d/1B2Ze3KqNHPECiKY-ZE5IgcLOGyV3aCiPVTlqX1iJZRA/edit?usp=sharing)</td>
-    </tr>
-    <tr>
-        <td>Projeto de Interface e Wireframes</td>
-        <td>Figma</td>
-        <td>()</td>
-    </tr>
      <tr>
         <td>Gerenciamento do Projeto</td>
         <td>TRELLO/td>
