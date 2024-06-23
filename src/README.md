@@ -6,11 +6,9 @@ Este é um projeto React Native que utiliza o Expo para facilitar o desenvolvime
 
 O projeto está organizado da seguinte maneira:
 
-- `components`: Esta pasta contém todos os componentes reutilizáveis.
+- `telas`: Esta pasta contém todos os componentes reutilizáveis.
 - `assets`: Esta pasta contém todos os recursos estáticos, como imagens e ícones.
-- `constants`: Esta pasta contém constantes que são usadas em todo o aplicativo.
-- `navigation`: Esta pasta contém a configuração de navegação do aplicativo.
-- `Telas`: Esta pasta contém todas as telas do aplicativo.
+- `App.tsx`: Componente principal da aplicação.
 
 ## Dependências
 
@@ -40,7 +38,7 @@ Para rodar o projeto ConnectSkill, é necessário configurar o ambiente de desen
 2. Execute o comando `npm install` ou `yarn` para instalar as dependências do projeto.
 3. Execute o comando `npm start` ou `yarn start` para iniciar o servidor de desenvolvimento do Expo.
 4. Aguarde até que o servidor seja iniciado e exiba um código QR no terminal.
-5. Abra o emulador Android previamente configurado ou conecte um dispositivo físico ao computador.
+5. Conecte no aplicativo através do Expo Go no seu celular, lendo o código QR no terminal.
 6. No terminal, pressione a tecla "a" para iniciar o aplicativo no emulador Android ou dispositivo físico.
 
-Certifique-se de que o Android Studio e o emulador Android estejam configurados corretamente para garantir o funcionamento adequado do projeto ConnectSkill.
+Caso opte pelo emulador no PC, certifique-se de que o Android Studio e o emulador Android estejam configurados corretamente para garantir o funcionamento adequado do projeto ConnectSkill.
