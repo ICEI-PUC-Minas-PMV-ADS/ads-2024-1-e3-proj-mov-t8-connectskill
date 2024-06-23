@@ -1,88 +1,163 @@
 # Registro de Testes de Software
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+Testes implementados em uma branch separada, utilizando Jest e fazendo Mock dos campos necessários.
 
-Os testes serão implementados conforme o Plano de Testes em conjunto com o desenvolvimento das funcionalidades. 
-Utilizaremos o Jest para realizar os testes das features, seguindo boas práticas de testes de software.
+# Registro:
 
-# Testes de funcionalidades iniciais
+```typescript
+import React from 'react';
+import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import Register from './Register';
+import { NavigationContainer } from '@react-navigation/native';
+import { FIREBASE_AUTH } from '../../FirebaseConfig';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-## Login 
+jest.mock('firebase/auth');
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/9396532e-df32-4dc1-b06c-57a5b66fb27b
+const mockNavigate = jest.fn();
+const mockGoBack = jest.fn();
 
-### Avaliação
+const mockProps = {
+  navigation: {
+    navigate: mockNavigate,
+    goBack: mockGoBack,
+    dispatch: jest.fn(),
+    reset: jest.fn(),
+    isFocused: jest.fn(),
+    canGoBack: jest.fn(),
+    dangerouslyGetParent: jest.fn(),
+    dangerouslyGetState: jest.fn(),
+    getId: jest.fn(),
+    getParent: jest.fn(),
+    getState: jest.fn(),
+    removeListener: jest.fn(),
+    setOptions: jest.fn(),
+    setParams: jest.fn(),
+    addListener: jest.fn(),
+  },
+};
 
-A tentativa de login com credenciais nao cadastradas é barrada corretamente, um erro de autenticação do Firebase é mostrado na tela, Ao tentar efetuar o login com as credenciais corretas, o login é autenticado e realizado com sucesso de maneira fluida com um modal de confirmação de login.
+describe('componente de registro', () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
-Nas próximas iterações, a mensagem de erro deverá ser atualizada para uma mensagem mais informativa, como por exemplo "credenciais incorretas".
+  it('deve renderizar o componente de registro', () => {
+    const { getByPlaceholderText, getByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-## Registro de interesses
+    expect(getByPlaceholderText('Nome')).toBeTruthy();
+    expect(getByPlaceholderText('Email')).toBeTruthy();
+    expect(getByPlaceholderText('Celular')).toBeTruthy();
+    expect(getByPlaceholderText('Senha')).toBeTruthy();
+    expect(getByText('Registrar')).toBeTruthy();
+  });
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/f292f710-877f-448d-a050-8bf71f73c0f5
+  it('deve mostrar um erro quando o nome é muito longo', async () => {
+    const { getByPlaceholderText, getByText, findByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-### Avaliação
+    const nameInput = getByPlaceholderText('Nome');
+    fireEvent.changeText(nameInput, 'a'.repeat(51));
 
-Os interesses sao registrados e persistidos no firestore no contexto do usuário corretamente.
+    const registerButton = getByText('Registrar');
+    fireEvent.press(registerButton);
 
-Nas próximas iterações, o registro de interesses deverá ser separado em um contexto próprio, adicionando também a possibilidade de editar seus interesses.
+    expect(await findByText('Erro')).toBeTruthy();
+    expect(await findByText('O nome deve ter no máximo 50 caracteres.')).toBeTruthy();
+  });
 
-## Exclusão de interesses
+  it('deve mostrar um erro quando o email é inválido', async () => {
+    const { getByPlaceholderText, getByText, findByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/611176fe-6b13-475b-bced-cf37b170c748
+    const emailInput = getByPlaceholderText('Email');
+    fireEvent.changeText(emailInput, 'invalid-email');
 
-### Avaliação
+    const registerButton = getByText('Registrar');
+    fireEvent.press(registerButton);
 
-Os interesses sao deletados e seu registro é apagado firestore no contexto do usuário corretamente.
+    expect(await findByText('Erro')).toBeTruthy();
+    expect(await findByText('Por favor, insira um email válido.')).toBeTruthy();
+  });
 
-Nas próximas iterações, deverá ser adicionado um modal de confirmação ao tentar deletar um interesse.
+  it('deve mostrar um erro quando o velular é inválido', async () => {
+    const { getByPlaceholderText, getByText, findByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-## Logout
+    const celularInput = getByPlaceholderText('Celular');
+    fireEvent.changeText(celularInput, '12345');
 
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/8d189d70-5144-4559-a62f-46de64af3758
+    const registerButton = getByText('Registrar');
+    fireEvent.press(registerButton);
 
-### Avaliação
+    expect(await findByText('Erro')).toBeTruthy();
+    expect(await findByText('Por favor, insira um número de celular válido no formato DDD + Celular, por exemplo 31912344321.')).toBeTruthy();
+  });
 
-O logout ocorre de forma fluida.
+  it('deve mostrar um erro quando a senha é inválido', async () => {
+    const { getByPlaceholderText, getByText, findByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-Nas próximas iterações, um modal de confirmação de logout poderá ser adicionado.
+    const passwordInput = getByPlaceholderText('Senha');
+    fireEvent.changeText(passwordInput, 'pass');
 
-# Testes de funcionalidades Etapa 4
+    const registerButton = getByText('Registrar');
+    fireEvent.press(registerButton);
 
-## Registro com dados do usuário
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/850d6d37-1d1b-4b2e-ae1e-2a71ca269368
+    expect(await findByText('Erro')).toBeTruthy();
+    expect(await findByText('A senha deve ter no mínimo 6 caracteres, com pelo menos um número e um caractere especial.')).toBeTruthy();
+  });
 
-### Avaliação
-O registro de novos usuários com dados adicionais (nome, celular) é realizado com sucesso e os dados são corretamente salvos no Firestore.
+  it('deve chamar a funçao createUserWithEmailAndPassword com os parametros corretos', async () => {
+    (createUserWithEmailAndPassword as jest.Mock).mockResolvedValueOnce({
+      user: { uid: '123' },
+    });
 
-## Lista de usuários com filtro de interesses e habilidades
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/6ed16f99-f963-4630-9df9-ca998b49cee8
+    const { getByPlaceholderText, getByText } = render(
+      <NavigationContainer>
+        <Register {...mockProps} />
+      </NavigationContainer>
+    );
 
-### Avaliação
-A lista de usuários é exibida corretamente, permitindo a filtragem por interesses e habilidades. A funcionalidade de busca funciona conforme esperado, mostrando apenas os usuários que correspondem aos critérios de busca.
+    const nameInput = getByPlaceholderText('Nome');
+    const emailInput = getByPlaceholderText('Email');
+    const celularInput = getByPlaceholderText('Celular');
+    const passwordInput = getByPlaceholderText('Senha');
 
-## CRUD de habilidades e interesses
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/a0951457-9f32-49f1-936d-ff436b22ea74
+    fireEvent.changeText(nameInput, 'Test User');
+    fireEvent.changeText(emailInput, 'test@example.com');
+    fireEvent.changeText(celularInput, '31912344321');
+    fireEvent.changeText(passwordInput, 'Test@1234');
 
-### Avaliação
-As funcionalidades de criar, ler, atualizar e deletar (CRUD) habilidades e interesses funcionam corretamente. Os registros são persistidos no Firestore e as operações de edição e exclusão são refletidas corretamente na interface do usuário.
+    const registerButton = getByText('Registrar');
+    fireEvent.press(registerButton);
 
-## Navegação entre abas pela navbar e tooltips das abas
-https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/94996003/a852e93b-f75c-4026-899a-744f8bce9cfd
-
-### Avaliação
-A navegação entre abas pela navbar funciona de forma fluida e intuitiva. Os ícones e labels das abas estão corretos e cada aba leva à sua respectiva tela.
-As tooltips em cada aba fornecem informações úteis sobre as funcionalidades disponíveis em cada tela. As tooltips aparecem corretamente ao interagir com os ícones das abas e melhoram a usabilidade do aplicativo.
-
-
-## Gráficos 
-
-Gráficos e dados sobre o projeto. 
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/a187139c-02f9-4cdd-b151-8af31c47dc3a)
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/ab823164-7c5c-423e-800d-bcbd1eb70b19)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/ads-2024-1-e3-proj-mov-t8-connectskill/assets/127440373/84e75877-78a1-48a5-b799-37c1e8b3ba94)
+    await waitFor(() => {
+      expect(createUserWithEmailAndPassword).toHaveBeenCalledWith(
+        FIREBASE_AUTH,
+        'test@example.com',
+        'Test@1234'
+      );
+    });
+  });
+});
+```
 
 
 
